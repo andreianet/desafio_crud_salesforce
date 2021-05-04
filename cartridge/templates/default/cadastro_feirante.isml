@@ -1,0 +1,79 @@
+<isdecorate template="common/layout/page">
+  <isscript>
+    var assets = require('*/cartridge/scripts/assets');
+    assets.addJs('/js/contactUs.js');
+    assets.addCss('/css/contactUs.css');
+  </isscript>
+<!--
+  <div class="hero slant-down contact-us-banner">
+    <h1 class="page-title">${Resource.msg('profile.title', 'form', null)}</h1>
+  </div>
+
+  <div class="container contact-us-landing-page">
+    <div class="row justify-content-center">
+      <div class="col-sm-8 col-md-6">
+        <div class="card">
+          <div class="card-body">
+-->
+
+            <form 
+            action="${pdict.actionURL}" 
+            class="feirante-form" 
+            method="POST" 
+            <isprint value="${pdict.feiranteForm.attributes}" encoding="off" />>
+            
+            
+            <div class="row">
+              
+              <!-- Nome Completo -->
+              <div class="col-12">
+                <div class="form-group 
+                ${pdict.feiranteForm.name.mandatory === true ? 'required' : ''}">
+                  <label class="form-control-label" for="name">
+                <!--    ${Resource.msg('profile.name', 'form', null)} -->
+                  </label>
+                  <input type="text" class="form-control" id="name" <isprint value="${pdict.feiranteForm.name.attributes}" encoding="off" /> autocomplete="given-name">
+                  <div class="invalid-feedback"></div>
+                </div>
+
+                <!-- Telefone -->
+  <!--              <div class="form-group ${pdict.contactForm.phone.mandatory === true ? 'required' : ''}">
+                  <label class="form-control-label" for="phone">
+                    ${Resource.msg('profile.phone', 'form', null)}
+                  </label>
+                  <input type="tel" class="form-control" id="phone" <isprint value="${pdict.contactForm.phone.attributes}" encoding="off" /> autocomplete="tel"/>
+                  <div class="invalid-feedback"></div>
+                </div>
+
+                <!-- Email -->
+   <!--             <div class="form-group ${pdict.contactForm.email.mandatory === true ? 'required' : ''} ${pdict.contactForm.email.htmlName}">
+                  <label class="form-control-label" for="email">
+                    ${Resource.msg('profile.email', 'form', null)}
+                  </label>
+                  <input type="email" class="form-control email" id="email" <isprint value="${pdict.contactForm.email.attributes}" encoding="off" /> aria-describedby="emailInvalidMessage" />
+                  <div class="invalid-feedback" id="emailInvalidMessage"></div>
+                </div>
+
+                <!-- Mensagem -->
+   <!--             <div class="form-group ${pdict.contactForm.message.mandatory === true ? 'required' : ''}">
+                  <label class="form-control-label" for="message">
+                    ${Resource.msg('profile.message', 'form', null)}
+                  </label>
+                  <textarea class="form-control" id="message" <isprint value="${pdict.contactForm.message.attributes}" encoding="off" />> </textarea>
+                  <div class="invalid-feedback"></div>
+                </div> -->
+              </div>  
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <button type="submit" name="save" class="btn btn-save btn-block btn-primary">${Resource.msg('button.enviar', 'form', null)}
+                </button>
+              </div>
+            </div>
+           </form>
+        <!--  </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+</isdecorate>
